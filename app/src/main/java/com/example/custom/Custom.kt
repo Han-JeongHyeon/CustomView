@@ -102,6 +102,7 @@ open class Custom @JvmOverloads constructor(
 
     private fun initRatingView() {
         mPartialViews = ArrayList()
+//        getP()
         for (i in 1..mNumStars) {
             val partialView = getPartialView(
                 i,
@@ -122,11 +123,14 @@ open class Custom @JvmOverloads constructor(
     ): PartialViewTrue {
         val partialView = PartialViewTrue(context, partialViewId, starWidth, starHeight, padding)
         partialView.setFilledDrawable(filledDrawable!!)
-        partialView.setEmptyDrawable(emptyDrawable!!)
+        getP(emptyDrawable)
+//        partialView.setEmptyDrawable(emptyDrawable!!)
         return partialView
     }
 
-
+    fun getP(emptyDrawable: Drawable?){
+        setEmptyDrawable(emptyDrawable!!)
+    }
 
     /**
      * Retain this method to let other RatingBar can custom their decrease animation.
@@ -411,6 +415,18 @@ open class Custom @JvmOverloads constructor(
     private var mEmptyView: ImageView? = null
 
     init {
+
+        fun setEmptyDrawable(drawable: Drawable) {
+            if (drawable.constantState == null) {
+                return
+            }
+            val clipDrawable = ClipDrawable(
+                drawable.constantState!!.newDrawable(), Gravity.END,
+                ClipDrawable.HORIZONTAL
+            )
+            mEmptyView!!.setImageDrawable(clipDrawable)
+        }
+
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.BaseRatingBar)
         val rating = typedArray.getFloat(R.styleable.BaseRatingBar_srb_rating, 0f)
         initParamsValue(typedArray, context)
