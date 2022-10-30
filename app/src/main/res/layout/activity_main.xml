@@ -6,46 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.example.custom.Custom
+<!--    <com.example.custom.Custom-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:layout_editor_absoluteX="65dp"-->
+<!--        tools:layout_editor_absoluteY="316dp" />-->
+
+
+    <com.example.custom.CustomTrue
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36"
-        app:srb_clearRatingEnabled="true"
-        app:srb_clickable="true"
-        app:srb_isIndicator="false"
-        app:srb_minimumStars="0"
-        app:srb_numStars="5"
-        app:srb_rating="0"
-        app:srb_scrollable="true"
-        app:srb_starHeight="50dp"
-        app:srb_starPadding="15dp"
-        app:srb_starWidth="50dp"
-        app:srb_stepSize="1"/>
+        app:layout_constraintVertical_bias="0.499"/>
 
-<!--    <com.example.custom.BaseRatingBar-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.36"-->
-<!--        app:srb_clearRatingEnabled="true"-->
-<!--        app:srb_clickable="true"-->
-<!--        app:srb_isIndicator="false"-->
-<!--        app:srb_minimumStars="1"-->
-<!--        app:srb_numStars="5"-->
-<!--        app:srb_rating="2"-->
-<!--        app:srb_scrollable="true"-->
-<!--        app:srb_starHeight="30dp"-->
-<!--        app:srb_starPadding="15dp"-->
-<!--        app:srb_starWidth="30dp"-->
-<!--        app:srb_stepSize="0.5"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

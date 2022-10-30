@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.drawable.ClipDrawable
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import android.util.Log
 import android.view.Gravity
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -20,8 +21,9 @@ class PartialViewTrue : RelativeLayout {
     private var mStarHeight = 0
 
     constructor(
-        context: Context?, partialViewId: Int, starWidth: Int, startHeight: Int,
-        padding: Int
+        context: Context?, partialViewId: Int
+        , starWidth: Int, startHeight: Int
+        , padding: Int
     ) : super(context) {
         mStarWidth = starWidth
         mStarHeight = startHeight

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="customViewData">
-        <attr name="itemTitleText" format="reference|string" />
-        <attr name="itemContentText" format="reference|string" />
-        <attr name="itemTitleTextColor" format="reference|color" />
-        <attr name="itemContentTextColor" format="reference|color" />
+    <declare-styleable name="BaseRatingBarTrue">
+        <attr format="integer" name="numStars"/>
+        <attr format="float" name="minimumStars"/>
+        <attr format="float" name="rating"/>
+        <attr format="dimension" name="starPadding"/>
+        <attr format="reference" name="drawableEmpty"/>
+        <attr format="reference" name="drawableFilled"/>
+        <attr format="boolean" name="isIndicator"/>
+        <attr format="boolean" name="scrollable"/>
+        <attr format="boolean" name="clickable"/>
+        <attr format="boolean" name="clearRatingEnabled"/>
+        <attr format="dimension" name="starWidth"/>
+        <attr format="dimension" name="starHeight"/>
+        <attr format="float" name="stepSize"/>
     </declare-styleable>
 
     <declare-styleable name="BaseRatingBar">
