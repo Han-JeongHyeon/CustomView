@@ -4,9 +4,9 @@
         <attr format="reference" name="rating_DrawableEmpty"/>
         <attr format="reference" name="rating_DrawableFilled"/>
         <attr format="integer" name="rating_Number"/>
-        <attr format="float" name="rating_Width"/>
-        <attr format="float" name="rating_Height"/>
-        <attr format="integer" name="rating_Padding"/>
+        <attr format="dimension" name="rating_Width"/>
+        <attr format="dimension" name="rating_Height"/>
+        <attr format="dimension|integer" name="rating_Padding"/>
     </declare-styleable>
 
 </resources>

@@ -13,10 +13,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rating_Number="5"
-        app:rating_Width="80"
-        app:rating_Height="80"
-        app:rating_Padding="40"
-        />
+        app:rating_Width="@dimen/widthSize"
+        app:rating_Height="@dimen/heightSize"
+        app:rating_Padding="@dimen/paddingSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
