@@ -13,7 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.setPadding
 import com.example.custom.databinding.LayoutCustomviewBinding
 
-@SuppressLint("ClickableViewAccessibility", "Recycle")
+@SuppressLint("ClickableViewAccessibility")
 class TrueRatingCustomView(context: Context, attrs: AttributeSet) : ConstraintLayout(context,attrs) {
     private var binding = LayoutCustomviewBinding.inflate(LayoutInflater.from(context), this, true)
 
@@ -41,7 +41,9 @@ class TrueRatingCustomView(context: Context, attrs: AttributeSet) : ConstraintLa
 
         filledDrawable = ContextCompat.getDrawable(
             context,
-            typedArray.getResourceId(R.styleable.TrueRatingCustomView_rating_DrawableFilled, R.drawable.filled))
+            typedArray.getResourceId(R.styleable.TrueRatingCustomView_rating_DrawableFilled,
+                R.drawable.filled
+            ))
 
         for (i in 1..number) {
             val imageViewId = getIdentifier(i)
@@ -60,9 +62,7 @@ class TrueRatingCustomView(context: Context, attrs: AttributeSet) : ConstraintLa
             }
         }
 
-        binding.checkBtn.setOnClickListener {
-            binding.tvRating.text = positionNum.toString()
-        }
+        typedArray.recycle()
     }
 
     private var positionNum: Int = 0
@@ -82,6 +82,10 @@ class TrueRatingCustomView(context: Context, attrs: AttributeSet) : ConstraintLa
         return findViewById(
             resources.getIdentifier("img$id","id","com.example.custom")
         )
+    }
+
+    fun getValue(): Int{
+        return 10
     }
 
 }
